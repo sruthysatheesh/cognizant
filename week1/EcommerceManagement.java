@@ -1,11 +1,9 @@
-package week1;
-
 import java.util.HashMap;
 import java.util.Map;
 
 class Product {
     private int productId;
-    public String productName;
+    private String productName;
     private String category;
 
     public Product(int id, String name, String category) {
@@ -16,6 +14,10 @@ class Product {
 
     public int getProductId() {
         return productId;
+    }
+
+    public String getProductName() {
+        return productName;
     }
 }
 
@@ -32,12 +34,12 @@ public class EcommerceManagement {
         catalog[count] = p;
         count++;
 
-        System.out.println("added: " + p.getProductId());
+        System.out.println("added: " + p.getProductName());
     }
 
     public int searchProduct(String name) {
         for (int i = 0; i < count; i++) {
-            if (catalog[i].productName.equals(name)) {
+            if (catalog[i].getProductName().equals(name)) {
                 System.out.println("found " + name + " at position " + (i + 1));
                 return 0;
             }
@@ -52,6 +54,7 @@ class MainApp {
 
         EcommerceManagement shop = new EcommerceManagement();
 
+        System.out.println("LINEAR SEARCH");
         Product p1 = new Product(101, "banana", "fruit");
         Product p2 = new Product(102, "apple", "fruit");
         Product p3 = new Product(103, "carrot", "vegetable");
