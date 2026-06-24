@@ -37,7 +37,7 @@ public class EcommerceManagement {
 
     public int searchProduct(String name) {
         for (int i = 0; i < count; i++) {
-            if (catalog[i].productName == name) {
+            if (catalog[i].productName.equals(name)) {
                 System.out.println("found " + name + " at position " + (i + 1));
                 return 0;
             }
