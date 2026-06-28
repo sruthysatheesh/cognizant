@@ -1,3 +1,4 @@
+package design_principles;
 class Logger {
     private static Logger instance;
 

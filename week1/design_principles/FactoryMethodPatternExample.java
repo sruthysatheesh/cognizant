@@ -1,3 +1,4 @@
+package design_principles;
 interface Document {
     void open();
 
